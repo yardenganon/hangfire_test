@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "KwJV/ULY4lEqGH04/i1hd2tzm0lzOLv6ceoXBKVtFS8=",
-  "Source": "HangFireApp",
-  "BasePath": "_content/HangFireApp",
+  "Hash": "GmQumFCCgT1ICH86K8fAgSCUmg8YDlBfAm0YQZXbcRk=",
+  "Source": "AdContentService",
+  "BasePath": "_content/AdContentService",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

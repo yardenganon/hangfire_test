@@ -1,7 +1,7 @@
 using Hangfire;
 using Hangfire.Console;
-using Hangfire.Console.LogExtension;
-using Hangfire.MemoryStorage;
+using HangFire.Jobs.Abstractions;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +13,7 @@ builder.Services.AddHangfire(configuration => configuration
         .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
         .UseSimpleAssemblyNameTypeSerializer()
         .UseRecommendedSerializerSettings()
-        .UseMemoryStorage()
+        .UseSqlServerStorage("Data Source=localhost,1433;Initial Catalog=master;User Id=sa;Password=yarden1234!;Integrated Security=False;MultiSubnetFailover=True;MultipleActiveResultSets=True;TrustServerCertificate=True")
         .UseConsole());//.UseConsoleLogger();
 
 
@@ -44,6 +44,20 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapGet("/RunSomeAdContentJob", ([AsParameters] SomeState state) => {
+    
+    var jobId = BackgroundJob.Enqueue<ISomeAdContentJob>(Queues.AdContentQueue, x => x.Execute(null, state));
+    return $"Job Enqueued {jobId}";
+    
+}).WithName("RunSomeAdContentJob");
+
+app.MapGet("/RunSomeAttributionJob", () => {
+    
+    var jobId = BackgroundJob.Enqueue<ISomeAttributionJob>(Queues.AttributionQueue, x => x.Execute(null));
+    return $"Job Enqueued {jobId}";
+    
+}).WithName("RunSomeAttributionJob");
 
 app.Run();
 

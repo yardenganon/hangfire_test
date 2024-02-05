@@ -1,7 +1,9 @@
+using AdContentService;
 using Hangfire;
 using Hangfire.Console;
-using Hangfire.Console.LogExtension;
-using Hangfire.MemoryStorage;
+using HangFire.Jobs.Abstractions;
+using Hangfire.MAMQSqlExtension;
+using Hangfire.SqlServer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,10 +15,13 @@ builder.Services.AddHangfire(configuration => configuration
         .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
         .UseSimpleAssemblyNameTypeSerializer()
         .UseRecommendedSerializerSettings()
-        .UseMemoryStorage()
+        .UseMAMQSqlServerStorage("Data Source=localhost,1433;Initial Catalog=master;User Id=sa;Password=yarden1234!;Integrated Security=False;MultiSubnetFailover=True;MultipleActiveResultSets=True;TrustServerCertificate=True",
+            new SqlServerStorageOptions(),
+            queues: new []{ Queues.AdContentQueue })
         .UseConsole());//.UseConsoleLogger();
 
-builder.Services.AddHangfireServer(options => options.Queues = ["ad-content"]);
+builder.Services.AddHangfireServer(options => options.Queues = new[] { Queues.AdContentQueue });
+builder.Services.AddTransient<ISomeAdContentJob, SomeAdContentJob>();
 
 // builder.Services.AddSingleton<IJobStateProvider<SyncAdsJobState>, SyncAdsJobStateProvider>();
 
@@ -46,7 +51,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-RecurringJob.AddOrUpdate<SomeAdContentJob>(nameof(SomeAdContentJob), r => r.Excecute(null), Cron.Minutely);
+RecurringJob.AddOrUpdate<ISomeAdContentJob>(nameof(SomeAdContentJob), r => r.Execute(null, SomeAdContentJob.GetDefaults), Cron.Minutely, queue: Queues.AdContentQueue);
 
 app.Run();
 

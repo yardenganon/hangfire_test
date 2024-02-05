@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "dXYTAkz4VZkfsZJ4o4ImedHCTiY9YT961cxLVri60Xqg08fjR5ZWdXwQ+baFEoTLEbCZB9cnJe2g62EGLL0a4Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yarden.ganon\\Documents\\My Web Sites\\hangfire_test\\HangFire.Jobs.Abstractions\\HangFire.Jobs.Abstractions.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yarden.ganon\\.nuget\\packages\\hangfire.core\\1.8.9\\hangfire.core.1.8.9.nupkg.sha512",
+    "C:\\Users\\yarden.ganon\\.nuget\\packages\\newtonsoft.json\\11.0.1\\newtonsoft.json.11.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
