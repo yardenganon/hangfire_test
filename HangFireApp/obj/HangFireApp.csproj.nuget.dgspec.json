@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Yarden\\Desktop\\Projects\\HangFire\\HangFireApp\\HangFireApp.csproj": {}
+    "C:\\Users\\yarden.ganon\\Documents\\My Web Sites\\hangfire_test\\HangFireApp\\HangFireApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Yarden\\Desktop\\Projects\\HangFire\\HangFireApp\\HangFireApp.csproj": {
+    "C:\\Users\\yarden.ganon\\Documents\\My Web Sites\\hangfire_test\\HangFire.Jobs.Abstractions\\HangFire.Jobs.Abstractions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yarden\\Desktop\\Projects\\HangFire\\HangFireApp\\HangFireApp.csproj",
-        "projectName": "HangFireApp",
-        "projectPath": "C:\\Users\\Yarden\\Desktop\\Projects\\HangFire\\HangFireApp\\HangFireApp.csproj",
-        "packagesPath": "C:\\Users\\Yarden\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yarden\\Desktop\\Projects\\HangFire\\HangFireApp\\obj\\",
+        "projectUniqueName": "C:\\Users\\yarden.ganon\\Documents\\My Web Sites\\hangfire_test\\HangFire.Jobs.Abstractions\\HangFire.Jobs.Abstractions.csproj",
+        "projectName": "HangFire.Jobs.Abstractions",
+        "projectPath": "C:\\Users\\yarden.ganon\\Documents\\My Web Sites\\hangfire_test\\HangFire.Jobs.Abstractions\\HangFire.Jobs.Abstractions.csproj",
+        "packagesPath": "C:\\Users\\yarden.ganon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yarden.ganon\\Documents\\My Web Sites\\hangfire_test\\HangFire.Jobs.Abstractions\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Yarden\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yarden.ganon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -37,12 +37,78 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.8.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\yarden.ganon\\Documents\\My Web Sites\\hangfire_test\\HangFireApp\\HangFireApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\yarden.ganon\\Documents\\My Web Sites\\hangfire_test\\HangFireApp\\HangFireApp.csproj",
+        "projectName": "HangFireApp",
+        "projectPath": "C:\\Users\\yarden.ganon\\Documents\\My Web Sites\\hangfire_test\\HangFireApp\\HangFireApp.csproj",
+        "packagesPath": "C:\\Users\\yarden.ganon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yarden.ganon\\Documents\\My Web Sites\\hangfire_test\\HangFireApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\yarden.ganon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\yarden.ganon\\Documents\\My Web Sites\\hangfire_test\\HangFire.Jobs.Abstractions\\HangFire.Jobs.Abstractions.csproj": {
+                "projectPath": "C:\\Users\\yarden.ganon\\Documents\\My Web Sites\\hangfire_test\\HangFire.Jobs.Abstractions\\HangFire.Jobs.Abstractions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Hangfire.AspNetCore": {
               "target": "Package",
-              "version": "[1.8.7, )"
+              "version": "[1.8.9, )"
             },
             "Hangfire.Console": {
               "target": "Package",
@@ -54,11 +120,23 @@
             },
             "Hangfire.Core": {
               "target": "Package",
-              "version": "[1.8.7, )"
+              "version": "[1.8.9, )"
+            },
+            "Hangfire.MAMQSqlExtension": {
+              "target": "Package",
+              "version": "[1.0.6, )"
             },
             "Hangfire.MemoryStorage": {
               "target": "Package",
               "version": "[1.8.0, )"
+            },
+            "Hangfire.SqlServer": {
+              "target": "Package",
+              "version": "[1.8.9, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.5, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -84,7 +162,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,12 @@
+C:\Users\yarden.ganon\Documents\My Web Sites\hangfire_test\HangFire.Jobs.Abstractions\bin\Debug\net7.0\HangFire.Jobs.Abstractions.deps.json
+C:\Users\yarden.ganon\Documents\My Web Sites\hangfire_test\HangFire.Jobs.Abstractions\bin\Debug\net7.0\HangFire.Jobs.Abstractions.dll
+C:\Users\yarden.ganon\Documents\My Web Sites\hangfire_test\HangFire.Jobs.Abstractions\bin\Debug\net7.0\HangFire.Jobs.Abstractions.pdb
+C:\Users\yarden.ganon\Documents\My Web Sites\hangfire_test\HangFire.Jobs.Abstractions\obj\Debug\net7.0\HangFire.Jobs.Abstractions.csproj.AssemblyReference.cache
+C:\Users\yarden.ganon\Documents\My Web Sites\hangfire_test\HangFire.Jobs.Abstractions\obj\Debug\net7.0\HangFire.Jobs.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yarden.ganon\Documents\My Web Sites\hangfire_test\HangFire.Jobs.Abstractions\obj\Debug\net7.0\HangFire.Jobs.Abstractions.AssemblyInfoInputs.cache
+C:\Users\yarden.ganon\Documents\My Web Sites\hangfire_test\HangFire.Jobs.Abstractions\obj\Debug\net7.0\HangFire.Jobs.Abstractions.AssemblyInfo.cs
+C:\Users\yarden.ganon\Documents\My Web Sites\hangfire_test\HangFire.Jobs.Abstractions\obj\Debug\net7.0\HangFire.Jobs.Abstractions.csproj.CoreCompileInputs.cache
+C:\Users\yarden.ganon\Documents\My Web Sites\hangfire_test\HangFire.Jobs.Abstractions\obj\Debug\net7.0\HangFire.Jobs.Abstractions.dll
+C:\Users\yarden.ganon\Documents\My Web Sites\hangfire_test\HangFire.Jobs.Abstractions\obj\Debug\net7.0\refint\HangFire.Jobs.Abstractions.dll
+C:\Users\yarden.ganon\Documents\My Web Sites\hangfire_test\HangFire.Jobs.Abstractions\obj\Debug\net7.0\HangFire.Jobs.Abstractions.pdb
+C:\Users\yarden.ganon\Documents\My Web Sites\hangfire_test\HangFire.Jobs.Abstractions\obj\Debug\net7.0\ref\HangFire.Jobs.Abstractions.dll
